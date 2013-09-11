@@ -14,14 +14,14 @@
     },
     "config": "/BaseCamp-ProjectInfo/configure",
     "register": "/registration",
-    "displayName" : "BaseCamp-ProjectInfo (BaseCamp-ProjectInfo)",
+    "displayName" : "BaseCamp-ProjectInfo (Jim-BaseCamp-ProjectInfo)",
     "name" : "BaseCamp-ProjectInfo",
     "description" : "BaseCamp-ProjectInfo",
     "style": "TABLE",
     "icons": {
-        "16": "http://i.cdn.turner.com/cnn/.e/img/3.0/global/header/hdr-main.gif",
-        "48": "http://i.cdn.turner.com/cnn/.e/img/3.0/global/header/hdr-main.gif",
-        "128": "http://i.cdn.turner.com/cnn/.e/img/3.0/global/header/hdr-main.gif"
+        "16" : "http://placehold.it/16x16",
+        "48" : "http://placehold.it/48x48",
+        "128" : "http://placehold.it/128x128"
     },
     "action": "/BaseCamp-ProjectInfo/action"
 }

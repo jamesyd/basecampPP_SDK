@@ -127,7 +127,7 @@ function doIt( host ) {
             "&accountID=" + config.accountID +
             "&query=" + query;
 
-        debugger;
+        //debugger;
         osapi.http.post({
             'href' : url,
             headers : { 'Content-Type' : ['application/json'] },
@@ -136,7 +136,7 @@ function doIt( host ) {
             'authz': 'signed',
             'body' : bodyPayload
         }).execute(function( response ) {
-                debugger;
+                //debugger;
                 //alert( "status=" + response.status) ;
                 if ( response.status >= 400 && response.status <= 599 ) {
                     alert("ERROR (discussion post)!" + JSON.stringify(response.content));
