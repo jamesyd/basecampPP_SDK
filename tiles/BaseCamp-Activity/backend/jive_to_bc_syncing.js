@@ -40,7 +40,7 @@ function recursiveProcessComments(commentsList, extstream) {
 
     commentsList.list.forEach(function (comment) {
         promise = promise.then(function (response) {
-            return pushCommentToSalesforce(comment, extstream);
+            return pushCommentToBasecamp(comment, extstream);
         });
     });
 
@@ -57,7 +57,7 @@ function recursiveProcessComments(commentsList, extstream) {
 
 };
 
-function pushCommentToSalesforce(jiveComment, extstream) {
+function pushCommentToBasecamp(jiveComment, extstream) {
 
     if (jiveComment.hasOwnProperty('externalID') && jiveComment['externalID'] != null) {
         jive.logger.error('Error! Attempted to push an external comment present in Jive back into Basecamp!');
@@ -88,19 +88,6 @@ function pushCommentToSalesforce(jiveComment, extstream) {
             return null;
         });
     });
-
-     /*
-    return sfdc_helpers.postSalesforceV27(ticketID, sampleOauth, uri, null).then(function (response) {
-        console.log('Pushed comment to Salesforce');
-        return opportunities.updateLastTimePulled(extstream, publishedTime, "jivecomment").then(function () {
-            var id = response && response.entity && response.entity.id;
-            if (id) {
-                return opportunities.recordSyncFromJive(extstream, id);
-            }
-            return null;
-        });
-    });
-    */
 }
 
 function extractPlainText(commentHtml) {
